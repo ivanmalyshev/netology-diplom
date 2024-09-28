@@ -2,3 +2,4 @@ yandex_token     = "" #https://oauth.yandex.ru/verification_code
 yandex_cloud_id  = ""
 yandex_folder_id = ""
 bucket_name     = ""  # Замените на уникальное имя бакета
+image_id = "fd8tvc3529h2cpjvpkr5" #ubuntu 24

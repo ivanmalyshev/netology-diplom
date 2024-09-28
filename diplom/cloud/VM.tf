@@ -2,7 +2,7 @@
 resource "yandex_compute_instance" "master_node" {
   name        = "k8s-master"
   zone        = "ru-central1-a"
-  platform_id = "standard-v1"  # Минимальная ВМ для мастера
+  platform_id = "standard-v2"  # Минимальная ВМ для мастера
   resources {
     cores  = 2
     memory = 4
@@ -25,7 +25,7 @@ resource "yandex_compute_instance" "master_node" {
 resource "yandex_compute_instance" "worker_node_b" {
   name        = "k8s-worker-b"
   zone        = "ru-central1-b"
-  platform_id = "standard-v1"
+  platform_id = "standard-v2"
   resources {
     cores  = 2
     memory = 4

@@ -59,36 +59,40 @@
 Вывод после применения `terraform apply`
 
 ```bash
+Apply complete! Resources: 13 added, 0 changed, 0 destroyed.
+
+Outputs:
+
 bucket_name = "imalyshev-bucket"
 created_subnets = [
   {
-    "id" = "e9boh04coih0qo9q8509"
+    "id" = "e9b35b5j2irv9b3vaaf1"
     "ipv4" = "10.0.0.0/24"
   },
   {
-    "id" = "e2ldo7g4blrq5frhuolq"
+    "id" = "e2l6r516if0jqdk3p8ed"
     "ipv4" = "10.0.1.0/24"
   },
   {
-    "id" = "fl8ueisr7t03c86dlm2a"
+    "id" = "fl8u96ugiqcdbubp1j90"
     "ipv4" = "10.0.2.0/24"
   },
 ]
-service_account_id = "ajet344p36o0nvuifcf1"
-service_account_key_created_at = "2024-09-28T05:59:53Z"
-service_account_key_id = "ajeajmuljci4rtles35o"
+service_account_id = "ajeae64o8tga6nf5drja"
+service_account_key_created_at = "2024-09-28T06:16:51Z"
+service_account_key_id = "aje9qded4vhmrr5cm6rb"
 vm_info = [
   {
-    "id" = "fhmcho636udnfah3f4po"
-    "ipv4" = "10.0.0.4"
+    "id" = "k8s-master"
+    "ipv4" = "89.169.141.50"
   },
   {
-    "id" = "epd2pelr6etuve774bss"
-    "ipv4" = "10.0.1.30"
+    "id" = "k8s-worker-b"
+    "ipv4" = "89.169.174.242"
   },
   {
-    "id" = "fv4c5s6ulnctth19npkj"
-    "ipv4" = "10.0.2.5"
+    "id" = "k8s-worker-d"
+    "ipv4" = "84.201.170.47"
   },
 ]
 ```

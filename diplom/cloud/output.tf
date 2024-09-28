@@ -29,16 +29,16 @@ output "created_subnets" {
 output "vm_info" {
   value = [
     {
-      id    = yandex_compute_instance.master_node.id
-      ipv4  = yandex_compute_instance.master_node.network_interface[0].ip_address
+      id    = yandex_compute_instance.master_node.name
+      ipv4  = yandex_compute_instance.master_node.network_interface[0].nat_ip_address
     },
     {
-      id    = yandex_compute_instance.worker_node_b.id
-      ipv4  = yandex_compute_instance.worker_node_b.network_interface[0].ip_address
+      id    = yandex_compute_instance.worker_node_b.name
+      ipv4  = yandex_compute_instance.worker_node_b.network_interface[0].nat_ip_address
     },
     {
-      id    = yandex_compute_instance.worker_node_d.id
-      ipv4  = yandex_compute_instance.worker_node_d.network_interface[0].ip_address
+      id    = yandex_compute_instance.worker_node_d.name
+      ipv4  = yandex_compute_instance.worker_node_d.network_interface[0].nat_ip_address
     }
   ]
 }
