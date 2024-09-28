@@ -1,6 +1,6 @@
 resource "yandex_iam_service_account" "service" {
   folder_id = var.yandex_folder_id
-  name      = "bucket-account"
+  name      = "tfbackend"
 }
 
 resource "yandex_resourcemanager_folder_iam_member" "bucket-editor" {

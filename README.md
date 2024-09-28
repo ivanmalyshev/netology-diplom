@@ -37,8 +37,7 @@
 Предварительная подготовка к установке и запуску Kubernetes кластера.
 
 1. Создайте сервисный аккаунт, который будет в дальнейшем использоваться Terraform для работы с инфраструктурой с необходимыми и достаточными правами. Не стоит использовать права суперпользователя
-2. Подготовьте [backend](https://www.terraform.io/docs/language/settings/backends/index.html) для Terraform:  
-   а. Рекомендуемый вариант: S3 bucket в созданном ЯО аккаунте(создание бакета через TF)
+2. Подготовьте backend для Terraform для Yandex Cloud
 3. Создайте VPC с подсетями в разных зонах доступности.
 4. Убедитесь, что теперь вы можете выполнить команды `terraform destroy` и `terraform apply` без дополнительных ручных действий.
 
@@ -48,6 +47,51 @@
 1. Terraform сконфигурирован и создание инфраструктуры посредством Terraform возможно без дополнительных ручных действий.
 2. Полученная конфигурация инфраструктуры является предварительной, поэтому в ходе дальнейшего выполнения задания возможны изменения.
 
+
+### На проверку
+
+все конфигурации вынесены в [cloud](diplom/cloud/)
+
+создание машин [VM](diplom/cloud/VM.tf)
+
+создание [сетей](diplom/cloud/subnets.tf)
+
+Вывод после применения `terraform apply`
+
+```bash
+bucket_name = "imalyshev-bucket"
+created_subnets = [
+  {
+    "id" = "e9boh04coih0qo9q8509"
+    "ipv4" = "10.0.0.0/24"
+  },
+  {
+    "id" = "e2ldo7g4blrq5frhuolq"
+    "ipv4" = "10.0.1.0/24"
+  },
+  {
+    "id" = "fl8ueisr7t03c86dlm2a"
+    "ipv4" = "10.0.2.0/24"
+  },
+]
+service_account_id = "ajet344p36o0nvuifcf1"
+service_account_key_created_at = "2024-09-28T05:59:53Z"
+service_account_key_id = "ajeajmuljci4rtles35o"
+vm_info = [
+  {
+    "id" = "fhmcho636udnfah3f4po"
+    "ipv4" = "10.0.0.4"
+  },
+  {
+    "id" = "epd2pelr6etuve774bss"
+    "ipv4" = "10.0.1.30"
+  },
+  {
+    "id" = "fv4c5s6ulnctth19npkj"
+    "ipv4" = "10.0.2.5"
+  },
+]
+```
 ---
 ### Создание Kubernetes кластера
 

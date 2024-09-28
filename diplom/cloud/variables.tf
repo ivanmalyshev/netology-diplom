@@ -17,3 +17,8 @@ variable "bucket_name" {
   description = "Name of the S3 bucket for Terraform state"
   type        = string
 }
+
+variable "image_id" {
+  description = "image_id for VMs"
+  type = string
+}
